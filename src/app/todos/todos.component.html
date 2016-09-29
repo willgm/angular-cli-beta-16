@@ -1,0 +1,16 @@
+<div class="">
+  <p>
+    todos works!
+  </p>
+
+  <input [(ngModel)]="newTodo" type="text" placeholder="Add a todo" (keyup.enter)="addTodo()">
+
+  <div *ngIf="!todos.length">
+    <br>
+    Nada para fazer! =)
+  </div>
+
+  <ul>
+    <li *ngFor="let todo of todos">{{todo.text}}</li>
+  </ul>
+</div>
